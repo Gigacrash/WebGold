@@ -20,20 +20,20 @@
 class CBlockHeader
 {
 public:
-    // header
-    int32_t nVersion;
-    uint256 hashPrevBlock;
-    uint256 hashMerkleRoot;
-    uint32_t nTime;
-    uint32_t nBits;
-    uint32_t nNonce;
+   // header
+   int32_t nVersion;
+   uint256 hashPrevBlock;
+   uint256 hashMerkleRoot;
+   uint32_t nTime;
+   uint32_t nBits;
+   uint32_t nNonce;
 
-    CBlockHeader()
-    {
-        SetNull();
-    }
+   CBlockHeader()
+   {
+      SetNull();
+   }
 
-    ADD_SERIALIZE_METHODS;
+   ADD_SERIALIZE_METHODS;
 
     template <typename Stream, typename Operation>
     inline void SerializationOp(Stream& s, Operation ser_action) {
